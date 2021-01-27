@@ -11,11 +11,6 @@ const options = {
     }
 }
 
-app.use("/en",(req,res,next)=>{    
-    res.removeHeader('X-Powered-By')
-    res.status(200).sendFile("GabrielRebelles-CV-En.pdf",options)
-})
-
 app.use((req,res,next)=>{    
     res.removeHeader('X-Powered-By')
     res.status(200).sendFile("GabrielRebelles-CV.pdf",options)
